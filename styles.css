@@ -1,0 +1,176 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Use a playful font like Poppins */
+    background-color: var(--background-color, #ffe8e8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Chat container */
+#chat-container {
+    width: 450px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dfe6e9;
+    position: relative;
+}
+
+/* Header with playful icons or images */
+#chat-header {
+    background-color: #ffe8e8;
+    padding: 15px;
+    border-bottom: 1px solid #f5f5f5;
+    text-align: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    color: #555;
+    border-radius: 25px 25px 0 0;
+}
+
+/* Mood-based Background Color */
+#chat-container.mood-joy {
+    --background-color: #fffc3e;
+}
+
+#chat-container.mood-sadness {
+    --background-color: #63c2e4;
+}
+
+#chat-container.mood-anger {
+    --background-color: #e95656;
+}
+
+#chat-container.mood-fear {
+    --background-color: #70e855;
+}
+
+#chat-container.mood-love {
+    --background-color: #ff9ae0;
+}
+
+#chat-container.mood-surprise {
+    --background-color: #f18959;
+}
+
+/* Chat box */
+#chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #fdfdfd;
+    max-height: 450px;
+    border-bottom: 1px solid #dfe6e9;
+}
+
+#chat-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+#chat-box::-webkit-scrollbar-thumb {
+    background-color: #b2bec3;
+    border-radius: 4px;
+}
+
+/* Messages */
+.user-message, .bot-message {
+    margin: 10px 0;
+    padding: 12px 18px;
+    border-radius: 25px;
+    max-width: 75%;
+    word-wrap: break-word;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #ffffff;
+    color: #0f0000;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #ffcccc;
+    color: #333;
+}
+
+/* Mood-based Message Bubble Colors */
+.mood-joy .bot-message {
+    background-color: #ffe8e8;
+}
+
+.mood-sadness .bot-message {
+    background-color: #2199c4;
+}
+
+.mood-anger .bot-message {
+    background-color: #d95f5f;
+}
+
+.mood-fear .bot-message {
+    background-color: #72e67f;
+}
+
+.mood-love .bot-message {
+    background-color: #f67878;
+}
+
+.mood-surprise .bot-message {
+    background-color: #de8ae1;
+}
+
+.timestamp {
+    display: inline;
+    font-size: 0.75em;
+    color: #999;
+    margin-left: 10px;
+}
+
+/* Input container */
+#input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #dfe6e9;
+    border-radius: 0 0 25px 25px;
+}
+
+#user-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#user-input:focus {
+    border-color: #74b9ff;
+}
+
+#send-btn {
+    background-color: #ff7675;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#send-btn:hover {
+    background-color: #d63031;
+}
+
+#send-btn:active {
+    background-color: #ff7675;
+}
